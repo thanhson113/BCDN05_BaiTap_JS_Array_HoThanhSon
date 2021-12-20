@@ -203,7 +203,7 @@ document.getElementById('btnDoiViTri').onclick = doiViTri;
  * Khối 3: Output     
  * chanCuoi
  */
-function doiViTri(){
+function sapXepTang(){
     for(var i = 0; i < numArray.length; i++){
         for(var j = 0; j < numArray.length; j++){
             if(numArray[j] > numArray[j + 1]){
@@ -219,7 +219,7 @@ function doiViTri(){
     "Mảng sắp xếp tăng dần là: "+numArray;
     
 }
-document.getElementById('btnTang').onclick = doiViTri;
+document.getElementById('btnTang').onclick = sapXepTang;
 
 /**
  * Bài 8:
