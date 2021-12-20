@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Loop</title>
+    <!-- BS4 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+</head>
+
+<body>
+    
+    <div class="container">
+        <div class="w-50 py-5 text-center">
+            <div class="card rounded ">
+                <div class="card-header bg-dark text-light text-uppercase ">
+                    Bài tập Array
+                </div>
+                <div class="card-body">
+                    <form>
+                        <!-- Nhập số -->
+                        <div class="form-group d-flex justify-content-between align-items-center">
+                          <input type="number" class="form-control w-75 mr-2" id="inpNum" placeholder="Nhập số nguyên">
+                          <button type="button" class="btn btn-primary w-25" id="btnNum">Thêm số</button>
+                        </div>
+                        <p class=" alert alert-success my-3" id="txtNum"></p>
+                        <!-- Bài 1 -->
+                        <div>
+                            <h4 class="text-left">1.Tính tổng các số dương trong mảng</h4>
+                            <div class="form-group  d-flex justify-content-between align-items-center">
+                             
+                                <p class=" alert alert-success w-75 h-100 py-3 my-3 mr-2" id="txtTong"></p>
+                              <button type="button" class="btn btn-primary w-25" id="btnTong">Tính tổng</button>
+                            </div>
+                        </div>
+                        <!-- Bài 2 -->
+                        <div>
+                            <h4 class="text-left">2.Đếm có bao nhiêu số dương trong mảng</h4>
+                            <div class="form-group  d-flex justify-content-between align-items-center">
+                             
+                                <p class=" alert alert-success w-75 h-100 py-3 my-3 mr-2" id="txtDem"></p>
+                              <button type="button" class="btn btn-primary w-25" id="btnDem">Đếm số</button>
+                            </div>
+                        </div>
+                        <!-- Bài 3 -->
+                        <div>
+                            <h4 class="text-left">3.Tìm số nhỏ nhất trong mảng</h4>
+                            <div class="form-group  d-flex justify-content-between align-items-center">
+                             
+                                <p class=" alert alert-success w-75 h-100 py-3 my-3 mr-2" id="txttimMin"></p>
+                              <button type="button" class="btn btn-primary w-25" id="btntimMin">Tìm số</button>
+                            </div>
+                        </div>
+                        <!-- Bài 4 -->
+                        <div>
+                            <h4 class="text-left">4.Tìm số dương nhỏ nhất trong mảng.</h4>
+                            <div class="form-group  d-flex justify-content-between align-items-center">
+                             
+                                <p class=" alert alert-success w-75 h-100 py-3 my-3 mr-2" id="txttimMin2"></p>
+                              <button type="button" class="btn btn-primary w-25" id="btntimMin2">Tìm số</button>
+                            </div>
+                        </div>
+                        <!-- Bài 5 -->
+                        <div>
+                            <h4 class="text-left">5.Tìm số chẵn cuối cùng trong mảng.</h4>
+                            <div class="form-group  d-flex justify-content-between align-items-center">
+                             
+                                <p class=" alert alert-success w-75 h-100 py-3 my-3 mr-2" id="txtChanCuoi"></p>
+                              <button type="button" class="btn btn-primary w-25" id="btnChanCuoi">Tìm số</button>
+                            </div>
+                        </div>
+                        <!-- Bài 6 -->
+                        <div>
+                            <h4 class="text-left">6.Đổi chỗ 2 giá trị trong mảng theo vị trí</h4>
+                            <div class="form-group  d-flex justify-content-between align-items-center">
+                                <input type="number" class="form-control w-75 mr-2" id="inpViTri1" placeholder="Nhập vị trí 1">
+                                <input type="number" class="form-control w-75 mr-2" id="inpViTri2" placeholder="Nhập vị trí 2">
+                            </div>
+                            <button type="button" class="btn btn-primary w-25" id="btnDoiViTri">Đổi chỗ</button>
+                            <p class=" alert alert-success  py-3 my-3 " id="txtDoiViTri"></p>
+                        </div>
+                        <!-- Bài 7 -->
+                        <div>
+                            <h4 class="text-left">7.Sắp xếp mảng theo thứ tự tăng dần.</h4>
+                            <div class="form-group  d-flex justify-content-between align-items-center">
+                             
+                                <p class=" alert alert-success w-75 h-100 py-3 my-3 mr-2" id="txtTang"></p>
+                              <button type="button" class="btn btn-primary w-25" id="btnTang">Tìm số</button>
+                            </div>
+                        </div>
+                        <!-- Bài 8 -->
+                        <div>
+                            <h4 class="text-left">8.Tìm số nguyên tố đầu tiên trong mảng</h4>
+                            <div class="form-group  d-flex justify-content-between align-items-center">
+                             
+                                <p class=" alert alert-success w-75 h-100 py-3 my-3 mr-2" id="txtSnt"></p>
+                              <button type="button" class="btn btn-primary w-25" id="btnSnt">Tìm số</button>
+                            </div>
+                        </div>
+                        <!-- Bài 9 -->
+                        <div>
+                            <h4 class="text-left">9.Tìm xem trong mảng có bao nhiêu số nguyên trong mảng</h4>
+                            <div class="form-group d-flex justify-content-between align-items-center">
+                                <input type="number" class="form-control w-75 mr-2" id="inpFloat" placeholder="Nhập số thực">
+                                <button type="button" class="btn btn-primary w-25" id="btnFloat">Thêm số</button>
+                              </div>
+                              <p class=" alert alert-success my-3" id="txtFloat"></p>
+                            <div class="form-group  d-flex justify-content-between align-items-center">
+                                <p class=" alert alert-success w-75 h-100 py-3 my-3 mr-2" id="txtdemNguyen"></p>
+                              <button type="button" class="btn btn-primary w-25" id="btndemNguyen">Tìm số</button>
+                            </div>
+                        </div>
+                        <!-- Bài 10 -->
+                        <div>
+                            <h4 class="text-left">10. So sánh số âm và số dương</h4>
+                            <div class="form-group  d-flex justify-content-between align-items-center">
+                                <p class=" alert alert-success w-75 h-100 py-3 my-3 mr-2" id="txtsoSanh"></p>
+                              <button type="button" class="btn btn-primary w-25" id="btnsoSanh">So sánh</button>
+                            </div>
+                        </div>
+                      </form>
+                </div>
+            </div>
+        </div>
+    
+    <!-- JQUERY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- BS4 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>
