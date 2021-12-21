@@ -5,7 +5,6 @@ function getNum(){
 
     numArray.push(num);
     document.getElementById('txtNum').innerHTML = numArray;
-    
 }
 document.getElementById('btnNum').onclick = getNum;
 
@@ -22,7 +21,7 @@ document.getElementById('btnNum').onclick = getNum;
  * Khối 3: Output     
  * Sum
  */
-function tinhTongsoDuong(){
+function tinhTongSoDuong(){
     var sum = 0
     for(var i = 0; i < numArray.length; i++){
         if(numArray[i] > 0){
@@ -31,9 +30,8 @@ function tinhTongsoDuong(){
     }
     document.getElementById('txtTong').innerHTML = 
     "Tổng là: "+sum;
-    
 }
-document.getElementById('btnTong').onclick = tinhTongsoDuong;
+document.getElementById('btnTong').onclick = tinhTongSoDuong;
 
 /**
  * Bài 2:
@@ -56,8 +54,7 @@ document.getElementById('btnTong').onclick = tinhTongsoDuong;
         }
     }
     document.getElementById('txtDem').innerHTML = 
-    "số dương là: "+count;
-    
+    "Số dương là: "+count;
 }
 document.getElementById('btnDem').onclick = demSoDuong;
 
@@ -78,14 +75,13 @@ document.getElementById('btnDem').onclick = demSoDuong;
  */
  function timMin(){
     var min = numArray[0];
-    for(var i = 0; i < numArray.length; i++){
+    for(var i = 1; i < numArray.length; i++){
         if(numArray[i] < min){
             min = numArray[i];
         }
     }
     document.getElementById('txttimMin').innerHTML = 
     "Số nhỏ nhất  là: "+min;
-    
 }
 document.getElementById('btntimMin').onclick = timMin;
 
@@ -96,33 +92,31 @@ document.getElementById('btntimMin').onclick = timMin;
  * Khối 2:
  * B1: Tạo hàm và khai báo biến
  * B2: 
- *  - Cho min = 0
  *  - Duyệt mảng Lấy các giá trị trong mảng số đã nhập vào,
- *  - Nếu phần tử nào lớn hơn min thì dừng vòng lặp và trả về min
- *  - Duyệt mảng lần 2 
- *  - Đem min đi so sánh với các phần tử dương còn lại trong mảng
- *  - Nếu có phần tử nào < min thì gán min bằng phần tử đó
+ *  - Nếu phần tử nào lớn hơn 0 thì đẩy các phần tử đó vào mảng mới
+ *  - Cho min bằng phần tử đầu tiên của mảng các phần tử lớn hơn 0
+ *  - Duyệt mảng các số lớn lớn hơn 0 vừa đẩy vào
+ *  - Nếu phần tử nào bé hơn min thì gán min cho phần tử đó
  * B3: Hiển thị kết quả
  * Khối 3: Output     
  * min
  */
  function timMinDuong(){
-    var min = 0;
+    var duongArr = [];
     for(var i = 0; i < numArray.length; i++){
-        if(numArray[i] > min ){
-            min = numArray[i];
-            break;
+        if(numArray[i] > 0){
+            duongArr.push(numArray[i]);
         }
     }
-    for(var i = 0;i < numArray.length;i++){
-        if(numArray[i] > 0 && numArray[i] < min){
-            min = numArray[i];
+    var minDuong = duongArr[0];
+    for(var i = 1; i < duongArr.length; i++){
+        if(duongArr[i] < minDuong){
+            minDuong = duongArr[i];
         }
     }
-    
+   
     document.getElementById('txttimMin2').innerHTML = 
-    "Số dương nhỏ nhất  là: "+min;
-    
+    "Số dương nhỏ nhất  là: "+minDuong;
 }
 document.getElementById('btntimMin2').onclick = timMinDuong;
 
@@ -149,11 +143,9 @@ document.getElementById('btntimMin2').onclick = timMinDuong;
             chanCuoi = -1;
         }
     }
-   
-    
+
     document.getElementById('txtChanCuoi').innerHTML = 
     "Số chẵn cuối cùng trong mảng  là: "+chanCuoi;
-    
 }
 document.getElementById('btnChanCuoi').onclick = timChanCuoi;
 
@@ -207,7 +199,6 @@ function sapXepTang(){
     for(var i = 0; i < numArray.length; i++){
         for(var j = 0; j < numArray.length; j++){
             if(numArray[j] > numArray[j + 1]){
-
                 var temp = numArray[j];
                 numArray[j] = numArray[j + 1];
                 numArray[j + 1] = temp;
@@ -217,7 +208,6 @@ function sapXepTang(){
     
     document.getElementById('txtTang').innerHTML = 
     "Mảng sắp xếp tăng dần là: "+numArray;
-    
 }
 document.getElementById('btnTang').onclick = sapXepTang;
 
@@ -248,7 +238,8 @@ function kiemTraSNT(snt){
     }
     return true;
 }
- function timSNT(){
+
+function timSNT(){
     for(var i = 0; i < numArray.length; i++){
         if(kiemTraSNT(numArray[i])){
             document.getElementById('txtSnt').innerHTML = 
@@ -277,7 +268,7 @@ document.getElementById('btnSnt').onclick = timSNT;
  */
  var floatArray = [];
 
- // Lấy số  từ input nhập vào
+// Lấy số  từ input nhập vào
 function laySoNguyen(){
     var num = Number(document.getElementById('inpFloat').value);
     floatArray.push(num)
@@ -289,7 +280,6 @@ function laySoNguyen(){
 document.getElementById('btnFloat').onclick = laySoNguyen;
 
 // Tìm số nguyên
-
 function timSoNguyen(){
     var count = 0;
     for(var i = 0; i < floatArray.length; i++){
@@ -339,3 +329,4 @@ function soSanhSoAmDuong(){
     }
 }
 document.getElementById('btnsoSanh').onclick = soSanhSoAmDuong
+
